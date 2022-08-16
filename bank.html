@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Account</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+<body>
+  <header>
+    <h1 class="text-5xl font-bold text-center mt-20">Welcome to <span class="text-rose-500">Tanin's</span> Account</h1>
+  </header>
+
+  <main class="container w-9/12 my-10 mx-auto">
+    <section>
+     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+       <div class="bg-pink-400 py-3 px-8 rounded">
+        <h2 class="text-3xl text-white">Deposite</h2>
+        <h1 class="text-4xl text-white">$<span id="deposite-amount">00</span> </h1>
+       </div>
+       <div class="bg-red-400 py-3 px-8 rounded">
+        <h2 class="text-3xl text-white">Withdraw</h2>
+        <h1 class="text-4xl text-white">$<span id="withdraw-amount">00</span></h1>
+       </div>
+       <div class="bg-orange-400 py-3 px-8 rounded">
+        <h2 class="text-3xl text-white">Total Amount</h2>
+        <h1 class="text-4xl text-white">$<span id="initial-amount">800</span></h1>
+       </div>
+     </div>
+    </section>
+
+    <section class="my-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="px-8 py-5 bg-sky-300 rounded">
+          <h2 class="text-4xl mb-5 text-white">Please Deposite</h2>
+          <input class="block w-3/4 mb-5 h-8 px-4" type="number" name="" id="deposite-value" placeholder="Deposite Amount">
+          <button class="bg-red-500 px-10 py-2 rounded-md text-white" type="submit" id="deposite-btn">Deposite</button>
+        </div>
+        <div class="px-8 py-5 bg-lime-400 rounded">
+          <h2 class="text-4xl mb-5 text-white">Withdraw Amount</h2>
+          <input class="block w-3/4 mb-5 h-8 px-4" type="number" name="" id="withdraw-value" placeholder="Withdraw Amount">
+          <button class="bg-red-500 px-10 py-2 rounded-md text-white" type="submit" id="withdraw-btn">Withdraw</button>
+        </div>
+      </div>
+    </section>
+   
+     </main>
+
+     <script src="bank.js"></script>
+</body>
+</html>
